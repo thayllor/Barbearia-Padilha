@@ -81,34 +81,16 @@ const Sobre: React.FC = () => {
       {/* Equipe Section */}
       <section className="equipe">
         <div className="container">
-          <h2>Nossa Equipe</h2>
+          <h2>Nosso Profissional</h2>
           <div className="equipe-grid">
             <div className="membro-card">
               <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="João Silva - Barbeiro Master"
+                src="/assets/logo nova.png"
+                alt="Valmir Cardoso - Proprietário e Barbeiro Master"
               />
-              <h3>João Silva</h3>
-              <p>Barbeiro Master</p>
-              <span>25 anos de experiência</span>
-            </div>
-            <div className="membro-card">
-              <img 
-                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Carlos Santos - Barbeiro Sênior"
-              />
-              <h3>Carlos Santos</h3>
-              <p>Barbeiro Sênior</p>
-              <span>15 anos de experiência</span>
-            </div>
-            <div className="membro-card">
-              <img 
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Rafael Costa - Barbeiro"
-              />
-              <h3>Rafael Costa</h3>
-              <p>Barbeiro</p>
-              <span>8 anos de experiência</span>
+              <h3>Valmir Cardoso</h3>
+              <p>Proprietário e Barbeiro Master</p>
+              <span>Mais de 35 anos de experiência</span>
             </div>
           </div>
         </div>

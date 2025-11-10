@@ -9,9 +9,9 @@ const Body: React.FC = () => {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
-            <h1>Entre em contato com nossa equipe de barbeiros</h1>
+            <h1>Entre em contato com nosso barbeiro profissional</h1>
             <p>
-              Profissionais experientes, ambiente acolhedor e os melhores 
+              Profissional experiente, ambiente acolhedor e os melhores 
               produtos para cuidar do seu visual com excelência e dedicação.
             </p>
             <a href={getAppointmentWhatsAppLink()} target="_blank" rel="noopener noreferrer">
