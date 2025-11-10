@@ -5,7 +5,7 @@ interface GaleriaItem {
   id: number;
   src: string;
   alt: string;
-  categoria: 'ambiente' | 'cortes' | 'produtos';
+  categoria: 'ambiente' | 'cortes' | 'clientes';
 }
 
 const galeriaData: GaleriaItem[] = [
@@ -24,14 +24,14 @@ const galeriaData: GaleriaItem[] = [
   { id: 10, src: '/assets/corte 10.jpg', alt: 'Resultado impecável', categoria: 'cortes' },
   
   // Clientes Satisfeitos - Resultados reais
-  { id: 11, src: '/assets/clientes 1.jpg', alt: 'Cliente satisfeito - trabalho realizado', categoria: 'produtos' },
-  { id: 12, src: '/assets/cliente 2.jpg', alt: 'Resultado do atendimento na Barbearia Padilha', categoria: 'produtos' },
-  { id: 13, src: '/assets/cliente 3.jpg', alt: 'Cliente após serviço completo', categoria: 'produtos' },
-  { id: 14, src: '/assets/cliente 4.jpg', alt: 'Satisfação garantida na Barbearia Padilha', categoria: 'produtos' },
+  { id: 11, src: '/assets/clientes 1.jpg', alt: 'Cliente satisfeito - trabalho realizado', categoria: 'clientes' },
+  { id: 12, src: '/assets/cliente 2.jpg', alt: 'Resultado do atendimento na Barbearia Padilha', categoria: 'clientes' },
+  { id: 13, src: '/assets/cliente 3.jpg', alt: 'Cliente após serviço completo', categoria: 'clientes' },
+  { id: 14, src: '/assets/cliente 4.jpg', alt: 'Satisfação garantida na Barbearia Padilha', categoria: 'clientes' },
 ];
 
 const Galeria: React.FC = () => {
-  const [filtroAtivo, setFiltroAtivo] = useState<'todos' | 'ambiente' | 'cortes' | 'produtos'>('todos');
+  const [filtroAtivo, setFiltroAtivo] = useState<'todos' | 'ambiente' | 'cortes' | 'clientes'>('todos');
   const [imagemModal, setImagemModal] = useState<GaleriaItem | null>(null);
 
   const imagensFiltradas = filtroAtivo === 'todos' 
@@ -81,10 +81,10 @@ const Galeria: React.FC = () => {
               Cortes
             </button>
             <button 
-              className={`filtro-btn ${filtroAtivo === 'produtos' ? 'ativo' : ''}`}
-              onClick={() => setFiltroAtivo('produtos')}
+              className={`filtro-btn ${filtroAtivo === 'clientes' ? 'ativo' : ''}`}
+              onClick={() => setFiltroAtivo('clientes')}
             >
-              Serviços
+              Clientes
             </button>
           </div>
         </div>
