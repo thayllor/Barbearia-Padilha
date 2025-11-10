@@ -1,0 +1,268 @@
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(108, 92, 231, 0.4);
+  border-bottom: 1px solid rgba(108, 92, 231, 0.2);
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-brand .logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid #6c5ce7;
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+  object-fit: cover;
+}
+
+.nav-brand h1 {
+  color: #6c5ce7;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(108, 92, 231, 0.7);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-menu a,
+.nav-menu Link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu Link:hover {
+  color: #a29bfe;
+  text-shadow: 0 0 8px rgba(162, 155, 254, 0.8);
+}
+
+.btn-agendar {
+  background: linear-gradient(45deg, #6c5ce7 0%, #a29bfe 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+}
+
+.btn-agendar:hover {
+  background: linear-gradient(45deg, #a29bfe 0%, #6c5ce7 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.6);
+}
+
+/* Estilos para links dentro dos botões */
+.btn-agendar a,
+.btn-primary a,
+.btn-secondary a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-cta a {
+  text-decoration: none;
+}
+
+/* Botão Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger-line.active:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-line.active:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.active:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Menu Mobile Sidebar */
+.mobile-sidebar {
+  position: fixed;
+  top: 100px; /* Altura do header */
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid rgba(108, 92, 231, 0.3);
+  transform: translateY(-100%);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobile-sidebar.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  list-style: none;
+  margin: 0;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-menu li {
+  text-align: center;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem;
+  display: block;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.mobile-menu a:hover {
+  background: rgba(108, 92, 231, 0.2);
+  border-color: rgba(108, 92, 231, 0.5);
+  color: #a29bfe;
+  transform: translateY(-2px);
+}
+
+.mobile-cta {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(108, 92, 231, 0.3);
+}
+
+.mobile-cta a {
+  border: none !important;
+  padding: 0 !important;
+}
+
+.mobile-cta .btn-agendar {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+/* Classes para desktop */
+.desktop-menu,
+.desktop-cta {
+  display: flex;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .desktop-menu,
+  .desktop-cta {
+    display: none;
+  }
+
+  .nav-brand .logo {
+    height: 80px;
+    width: 80px;
+  }
+
+  .nav-brand h1 {
+    font-size: 1.4rem;
+  }
+  
+  .navbar {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  
+  /* Ajusta a altura do header no mobile */
+  .header {
+    padding: 0.8rem 0;
+  }
+  
+  .nav-brand h1 {
+    font-size: 1.5rem;
+  }
+}
